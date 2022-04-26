@@ -1,13 +1,160 @@
 /************************************** DESKTOP VIEW ****************************************/
 body{
-    font-family: arial, serif;
+    background: black;
+    font-family: Tahoma , sans-serif;
     color: #333;
     text-align: center;
 }
+.images-title{
+    font-size: 3.2em;
+    font-weight: bold;
+    margin: 50px auto 0 auto;
+    color:white;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+/* Glow Effect */
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000,
+        0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #ffffff;
+    }
+    to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 30px whitesmoke, 0 0 40px antiquewhite, 0 0 50px ghostwhite,
+        0 0 60px floralwhite, 0 0 70px navajowhite, 0 0 80px white;
+    }
+}
+.images{
+    align-items: center;
+    display: flex;
+    height: 400px;
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+}
+.image{
+    height: 300px;
+    opacity: 0; /* change */
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    width: 300px;
+    z-index: 0;
+    background-size: 300px;
+}
+#src-1{
+    background: url("../images/img1.jpeg");
+    background-size: 100px;
+}
+#src-2{
+    background: url("../images/img2.jpeg");
+    background-size: 200px;
+}
+#src-3{
+    background: url("../images/img3.jpeg");
+    background-size: 300px;
+}
+#src-4{
+    background: url("../images/img4.jpeg");
+    background-size: 200px;
+}
+#src-5{
+    background: url("../images/img5.jpeg");
+    background-size: 100px;
+}
+#src-6{
+    background: url("../images/img6.jpeg");
+    background-size: 100px;
+}
+.img-1{
+    left: 15%;
+    transform: translateX(-50%);
+}
+.img-2{
+    left: 30%;
+    transform: translateX(-50%);
+}
+.img-3{
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+    height: 300px;
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    z-index: 2;
+}
+.img-4{
+    left: 70%;
+    transform: translateX(-50%);
+}
+.img-2,.img-4{
+    height: 200px;
+    opacity: 1;
+    width: 200px;
+    z-index: 1;
+}
+.img-5{
+    left: 85%;
+    transform: translateX(-50%);
+}
+.img-1,.img-5{
+    height: 100px;
+    opacity: .4;
+    width: 100px;
+    z-index: 1;
+}
 
+/* carousel buttons */
+#controls{
+    display: flex;
+    justify-content: center;
+}
+#controls button {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 0.6em;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0 0 40px 40px black inset, 0 0 0 0 #ffffff;
+    transition: all 150ms ease-in-out;
+    font-weight: bolder;
+}
+#controls #prevBtn{
+    padding: 1.2em 1.5em;
+}
+#controls button:hover {
+    box-shadow: 0 0 10px 0 #ffffff inset, 0 0 10px 4px #ffffff;
+    background: #ffffff;
+    color: black;
+    outline: 0;
+}
+#nextBtn:active{
+    transform: translateX(10px);
+}
+#prevBtn:active{
+    transform: translateX(-10px);
+}
 /************************************** MOBILE VIEW *****************************************/
 @media only screen and (max-width: 600px){
-
-
+    .images{
+        height: 350px;
+    }
+    #controls{
+        margin: 0;
+    }
 
 }
