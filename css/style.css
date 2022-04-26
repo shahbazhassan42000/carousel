@@ -15,14 +15,16 @@ body{
     animation: glow 1s ease-in-out infinite alternate;
 }
 /* Glow Effect */
-@-webkit-keyframes glow {
-    from {
-        text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000,
-        0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #ffffff;
-    }
-    to {
-        text-shadow: 0 0 20px #eeeeee, 0 0 30px whitesmoke, 0 0 40px antiquewhite, 0 0 50px ghostwhite,
-        0 0 60px floralwhite, 0 0 70px navajowhite, 0 0 80px white;
+@media only screen and (min-width: 720px) {
+    @-webkit-keyframes glow {
+        from {
+            text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000,
+            0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #ffffff;
+        }
+        to {
+            text-shadow: 0 0 20px #eeeeee, 0 0 30px whitesmoke, 0 0 40px antiquewhite, 0 0 50px ghostwhite,
+            0 0 60px floralwhite, 0 0 70px navajowhite, 0 0 80px white;
+        }
     }
 }
 .images{
@@ -155,6 +157,14 @@ body{
     }
     #controls{
         margin: 0;
+    }
+    #controls #prevBtn{
+        padding: 0.9em 1.2em;
+        margin-right: 5px;
+    }
+    #controls #nextBtn{
+        padding: 0.9em 2.1em;
+        margin-left: 5px;
     }
 
 }
